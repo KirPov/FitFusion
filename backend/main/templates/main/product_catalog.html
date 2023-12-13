@@ -1,0 +1,22 @@
+{% extends "main/base.html"%}
+{% load static %}
+{% block title %}FitFusion{% endblock %}
+{% block content %}
+
+
+<div class="tabs">
+                <div class="tabs_content">
+                  <div class="tabs_content-items">
+                      {% if products_list.count == 0 %}
+                    	<h3>Товаров нет</h3>
+                      {% else  %}
+                          {% for item in products_list  %}
+                              <div class="card">
+                            <img src="{{item.img.url}}" alt="">
+                        </div>
+                          {% endfor %}
+                      {% endif %}
+                  </div>
+                </div>
+            </div>
+{% endblock %}

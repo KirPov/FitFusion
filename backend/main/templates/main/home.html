@@ -1,0 +1,19 @@
+{% extends "main/base.html"%}
+{% block title %}FitFusion{% endblock %}
+{% block content %}
+     <section class="top">
+                <div class="container">
+                    <h1 class="title">
+                        Открой для себя спорт по-новому
+                    </h1>
+                    <h2 class="title1">
+                        Только у нас - широкий ассортимент,<br>
+                         доступные цены, быстрая доставка.<br>
+                        Выбирайте качественные товары <br>
+                        для спорта по выгодным ценам.
+                    </h2>
+                    <a href="{% url 'order' %}" id="open_pop" class="top__link">Оформить заказ</a>
+                    <a href="{% url 'add' %}" class="register">Добавить товар</a>
+                </div>
+            </section>
+{% endblock %}
